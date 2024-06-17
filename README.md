@@ -67,6 +67,12 @@
      - https://github.com/bitnami/charts/tree/main/bitnami/aspnet-core
      version: 6.2.1
      ```
+6. **Download Chart Package**:
+   - If you want to download the Helm chart package (tgz file) without installing it, you can use `helm pull`:
+     ```bash
+     helm pull bitnami/aspnet-core
+     ```
+     This command downloads the chart package (`aspnet-core-6.2.1.tgz`) to your current directory.
 
 ### Explanation:
 
@@ -74,6 +80,7 @@
 - **Initialize a Helm Chart Repository**: Adds the Bitnami chart repository and updates it to ensure the latest charts are available.
 - **Search the Bitnami Chart Repository**: Demonstrates how to search for available charts within the Bitnami repository.
 - **Install an Example Chart (ASP.NET Core)**: Guides users on how to install the ASP.NET Core chart from Bitnami using `helm install`.
+- **Download Chart Package**: Provides instructions on how to download the Helm chart package (`aspnet-core-6.2.1.tgz`) without installing it using `helm pull`.
 - **Specific Chart Details**: Offers detailed information about the ASP.NET Core chart using `helm show`, displaying metadata, dependencies, and other relevant details.
 
 This structured approach ensures that users can follow step-by-step instructions to interact with Helm and explore/install charts from the Bitnami repository effectively. Adjust URLs and details as per your specific needs or preferences.
