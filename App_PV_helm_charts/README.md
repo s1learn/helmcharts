@@ -1,4 +1,4 @@
-***Updated Directory Structure and Files***
+**Updated Directory Structure and Files**
 Here's the full directory structure for the main-application Helm chart, including the sub-charts for general-job, web-frontend, and web-backend, along with the CronJob configuration, with the container port 8080.
 
  ```bash
@@ -19,19 +19,19 @@ web-backend/
     deployment.yaml
 ```
 
-***Steps to Deploy***
+**Steps to Deploy**
 1. *Navigate to the main-application directory*:
  ```bash
 cd path/to/main-application
 ```
 
-2. *Update dependencies*:
+2. **Update dependencies**:
  ```bash
 helm dependency update
 ```
 This command will fetch and update the dependencies specified in the Chart.yaml file of the main application.
 
-3. *Deploy the main application*:
+3. **Deploy the main application**:
  ```bash
 helm install main-application .
 ```
