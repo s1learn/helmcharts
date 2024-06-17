@@ -1,0 +1,16 @@
+apiVersion: v2
+name: main-application
+description: A Helm chart for managing the main application and its dependencies
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: general-job
+    version: 0.1.0
+    repository: file://../general-job
+  - name: web-frontend
+    version: 0.1.0
+    repository: file://../web-frontend
+  - name: web-backend
+    version: 0.1.0
+    repository: file://../web-backend

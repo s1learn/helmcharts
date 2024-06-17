@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: general-job
+spec:
+  schedule: "15 13 * * *"  # This schedules the job to run every day at 01:15 PM
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: general-job
+            image: your-batch-job-image
+            volumeMounts:
+            - mountPath: /opt/batch/datafiles
+              name: data-volume
+          volumes:
+          - name: data-volume
+            persistentVolumeClaim:
+              claimName: general-job-pvc
+          restartPolicy: OnFailure
