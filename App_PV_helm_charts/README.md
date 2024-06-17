@@ -1,5 +1,5 @@
 ***Updated Directory Structure and Files***
-Here's the full directory structure for the main-application Helm chart, including the sub-charts for general-job, web-frontend, and web-backend, along with the CronJob configuration, with the container port changed to 8080.
+Here's the full directory structure for the main-application Helm chart, including the sub-charts for general-job, web-frontend, and web-backend, along with the CronJob configuration, with the container port 8080.
 
  ```bash
 main-application/
