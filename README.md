@@ -20,13 +20,7 @@
      helm search repo bitnami
      ```
 
-4. **Install an Example Chart (ASP.NET Core)**:
-   - ASP.NET Core is an open-source framework for web application development created by Microsoft. It runs on both the full .NET Framework, on Windows, and the cross-platform .NET Core.
-     ```bash
-     helm install bitnami/aspnet-core --generate-name
-     ```
-
-5. **Specific Chart Details**:
+4. **Specific Chart Details**:
    - If you want detailed information about the ASP.NET Core chart, you can use `helm show` to view its details without installation:
      ```bash
      helm show chart bitnami/aspnet-core
@@ -67,12 +61,22 @@
      - https://github.com/bitnami/charts/tree/main/bitnami/aspnet-core
      version: 6.2.1
      ```
-6. **Download Chart Package**:
+5. **Download Chart Package**:
    - If you want to download the Helm chart package (tgz file) without installing it, you can use `helm pull`:
      ```bash
      helm pull bitnami/aspnet-core
      ```
      This command downloads the chart package (`aspnet-core-6.2.1.tgz`) to your current directory.
+
+6. **Install an Example Chart (ASP.NET Core)**:
+   - ASP.NET Core is an open-source framework for web application development created by Microsoft. It runs on both the full .NET Framework, on Windows, and the cross-platform .NET Core.
+     ```bash
+     helm install bitnami/aspnet-core --generate-name
+     ```
+   - **Note**: If you do not have a Kubernetes cluster configured, you will encounter the following error:
+     ```
+     Error: INSTALLATION FAILED: Kubernetes cluster unreachable: Get "http://localhost:8080/version": dial tcp [::1]:8080: connectex: No connection could be made because the target machine actively refused it.
+     ```
 
 ### Explanation:
 
